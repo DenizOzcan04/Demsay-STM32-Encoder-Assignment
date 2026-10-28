@@ -134,9 +134,4 @@ Test sonucu:
 All encoder tests passed.
 ```
 
-## Donanım üzerinde kontrol edilmesi gerekenler
 
-- Görevdeki kabul doğrultusunda tur başına 100 count kullanıldı. Gerçek encoder veri sayfasında değer kanal başına PPR olarak veriliyorsa ve dört kenar sayılıyorsa tur başına count değeri 400 olabilir. Bu durumda yalnızca `ENCODER_COUNTS_PER_REV` değiştirilmelidir.
-- `CW` ve `CCW` yönleri A/B bağlantı sırasına bağlıdır. Fiziksel bağlantıda yönler ters görünürse kanallar yer değiştirebilir veya yön eşlemesi ters çevrilebilir.
-- PA0 ve PA1 için dahili pull-up/pull-down kullanılmadı. Encoder çıkış tipine göre harici direnç gerekebilir.
-- Kart ve encoder hazır olduğunda UART çıktısı, gerçek RPM karşılaştırması ve gürültülü sinyal davranışı ayrıca doğrulanmalıdır.
