@@ -1,0 +1,23 @@
+name: Host Encoder Tests
+
+"on":
+  push:
+  pull_request:
+
+jobs:
+  encoder-tests:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Compile host tests
+        run: |
+          gcc -DENCODER_HOST_TEST -std=c11 -Wall -Wextra -Werror \
+            -ICore/Inc Core/Src/encoder.c Tests/encoder_test.c \
+            -o encoder_test
+
+      - name: Run host tests
+        run: ./encoder_test
+

@@ -1,0 +1,25 @@
+# STM32CubeIDE build output
+Debug/
+Release/
+
+# Compiler output
+*.o
+*.d
+*.su
+*.elf
+*.hex
+*.bin
+*.map
+*.list
+
+# IDE and operating-system noise
+.metadata/
+*.log
+*.tmp
+.DS_Store
+Thumbs.db
+
+# Host test executable
+encoder_test
+encoder_test.exe
+
